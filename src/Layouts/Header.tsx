@@ -115,64 +115,51 @@ const Header: React.FC<HeaderProps> = (props) => {
             {
               content: (
                 <Link href="/">
-                  <a className="logo">Admin Template</a>
+                  <a className="logo">Automaton</a>
                 </Link>
               ),
             },
-            {
-              content: (
-                <SelectStyled
-                  instanceId="react-select-input"
-                  isSearchable={false}
-                  shape="SemiRound"
-                  placeholder="Themes"
-                  value={themeOptions().find((item) => item.value === props.theme.value)}
-                  options={themeOptions()}
-                  onChange={({ value }: { value: DefaultTheme['name'] }) => props.theme.set(value)}
-                />
-              ),
-            },
-            {
-              content: (
-                <Button size="Small" onClick={() => props.changeDir()}>
-                  {props.dir}
-                </Button>
-              ),
-            },
+            // {
+            //   content: (
+            //     <SelectStyled
+            //       instanceId="react-select-input"
+            //       isSearchable={false}
+            //       shape="SemiRound"
+            //       placeholder="Themes"
+            //       value={themeOptions().find((item) => item.value === props.theme.value)}
+            //       options={themeOptions()}
+            //       onChange={({ value }: { value: DefaultTheme['name'] }) => props.theme.set(value)}
+            //     />
+            //   ),
+            // },
+            // {
+            //   content: (
+            //     <Button size="Small" onClick={() => props.changeDir()}>
+            //       {props.dir}
+            //     </Button>
+            //   ),
+            // },
           ]}
         />
         <Actions
           size="Small"
           className="right"
           actions={[
-            {
-              content: (
-                <a
-                  className="left"
-                  href={`https://github.com/paljs/nextjs-admin-template`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="github">Support us in GitHub</span>
-                  <img src={`https://badgen.net/github/stars/paljs/nextjs-admin-template`} />
-                </a>
-              ),
-            },
-            {
-              content: (
-                <a
-                  href="https://paljs.slack.com/join/shared_invite/zt-i4z1bx9j-CnPaPRR8dtKsKfALCKSRKQ#/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img height="20" src="/slack.svg" alt="slack" />
-                </a>
-              ),
-            },
-            {
-              icon: 'twitter',
-              url: { href: 'https://twitter.com/AhmedElywh', target: '_blank' },
-            },
+            // {
+            //   content: (
+            //     <a
+            //       href="https://paljs.slack.com/join/shared_invite/zt-i4z1bx9j-CnPaPRR8dtKsKfALCKSRKQ#/"
+            //       target="_blank"
+            //       rel="noreferrer"
+            //     >
+            //       <img height="20" src="/slack.svg" alt="slack" />
+            //     </a>
+            //   ),
+            // },
+            // {
+            //   icon: 'twitter',
+            //   url: { href: 'https://twitter.com/AhmedElywh', target: '_blank' },
+            // },
             {
               content: (
                 <ContextMenu

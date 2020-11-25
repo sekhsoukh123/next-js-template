@@ -7,6 +7,62 @@ const items: MenuItemType[] = [
     link: { href: '/dashboard' },
   },
   {
+    title: 'Users',
+    icon: { name: 'person' },
+    children: [
+      {
+        title: 'List',
+        link: { href: '/user' },
+      },
+      {
+        title: 'Add',
+        link: { href: '/user/add' },
+      },
+    ],
+  },
+  {
+    title: 'Clients',
+    icon: { name: 'people' },
+    children: [
+      {
+        title: 'List',
+        link: { href: '/client' },
+      },
+      {
+        title: 'Add',
+        link: { href: '/client/add' },
+      },
+    ],
+  },
+  {
+    title: 'Loan vehicles',
+    icon: { name: 'car' },
+    children: [
+      {
+        title: 'List',
+        link: { href: '/loan-vehicule' },
+      },
+      {
+        title: 'Add',
+        link: { href: '/loan-vehicule/add' },
+      },
+    ],
+  },
+  {
+    title: 'Customer vehicles',
+    icon: { name: 'car-outline' },
+    children: [
+      {
+        title: 'List',
+        link: { href: '/customer-vehicles' },
+      },
+      {
+        title: 'Add',
+        link: { href: '/customer-vehicles/add' },
+      },
+    ],
+  },
+  {
     title: 'FEATURES',
     group: true,
   },
