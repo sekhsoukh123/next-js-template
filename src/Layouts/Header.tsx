@@ -173,7 +173,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                   ]}
                   Link={Link}
                 >
-                  <User image="url('/icons/icon-72x72.png')" name="Ahmed Elywa" title="Manger" size="Medium" />
+                  <User image="url('/icons/icon-72x72.png')" name="Sekhsoukh Chaymae" title="Developer" size="Medium" />
                 </ContextMenu>
               ),
             },

@@ -5,6 +5,7 @@ import { Card, CardBody } from '@paljs/ui/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { faEye, faPencilAlt, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 
 export default function Index() {
   const fruits = [
@@ -20,6 +21,8 @@ export default function Index() {
     'Oranges',
     'Peaches',
   ];
+
+  const userId = 1;
 
   return (
     <Layout title="Index">
@@ -49,15 +52,25 @@ export default function Index() {
                   <td>test</td>
 
                   <td>
-                    <Button variant="primary" size="sm" href="user/view/">
-                      <FontAwesomeIcon icon={faEye} />{' '}
-                    </Button>
-                    <Button variant="success" size="sm" href="user/edit">
-                      <FontAwesomeIcon icon={faPencilAlt} />{' '}
-                    </Button>
-                    <Button variant="danger" size="sm" href="#">
-                      <FontAwesomeIcon icon={faTrash} />{' '}
-                    </Button>
+                    <Link href={'/user/' + userId}>
+                      <a className="btn btn-primary btn-sm">
+                        {' '}
+                        <FontAwesomeIcon icon={faEye} />{' '}
+                      </a>
+                    </Link>
+
+                    <Link href={'/user/edit/' + userId}>
+                      <a className="btn btn-success btn-sm">
+                        {' '}
+                        <FontAwesomeIcon icon={faPencilAlt} />{' '}
+                      </a>
+                    </Link>
+                    <Link href={'/user/edit/' + userId}>
+                      <a className="btn btn-danger btn-sm">
+                        {' '}
+                        <FontAwesomeIcon icon={faTrash} />{' '}
+                      </a>
+                    </Link>
                   </td>
                 </tr>
               ))}
